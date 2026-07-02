@@ -1,15 +1,21 @@
 package com.example.project;
 
 public class Rectangle implements Shape {
-    // TODO: add fields as needed
+
+    private double width;
+    private double height;
 
     public Rectangle(double width, double height) {
-        // TODO: store parameter(s)
+        this.width = width;
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        // TODO: compute and return area
-        return 0;
+        // Si el ancho o alto es menor o igual a 0, retorna 0
+        if (width <= 0 || height <= 0) {
+            return 0;
+        }
+        return width * height;
     }
 }
